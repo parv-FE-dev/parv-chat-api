@@ -18,7 +18,7 @@ const FAQ_ENTRIES: FAQEntry[] = [
   },
   {
     keywords: ["experience", "career", "work history", "background", "worked at", "jobs"],
-    answer: `Parv has ${ctx.yearsExperience} years of experience:\n\n- **${ctx.experience[0].role}** at ${ctx.experience[0].company} (${ctx.experience[0].period}) — ${ctx.experience[0].description}\n- **${ctx.experience[1].role}** at ${ctx.experience[1].company} (${ctx.experience[1].period}) — Built 12+ production apps with 98+ Lighthouse scores\n- **${ctx.experience[2].role}** (${ctx.experience[2].period}) — Completed 20+ projects with 100% client satisfaction`,
+    answer: `Parv has ${ctx.yearsExperience} years of experience:\n\n- **${ctx.experience[0].role}** at ${ctx.experience[0].company} (${ctx.experience[0].period}) — ${ctx.experience[0].description}\n- **${ctx.experience[1].role}** at ${ctx.experience[1].company} (${ctx.experience[1].period}) — ${ctx.experience[1].description}\n- **${ctx.experience[2].role}** at ${ctx.experience[2].company} (${ctx.experience[2].period}) — ${ctx.experience[2].description}`,
   },
   {
     keywords: ["skills", "tech stack", "technologies", "languages", "frameworks", "what can"],
@@ -34,7 +34,7 @@ const FAQ_ENTRIES: FAQEntry[] = [
   },
   {
     keywords: ["current role", "neurowyzr", "currently", "working on", "present"],
-    answer: `Parv is currently a **${ctx.experience[0].role}** at **${ctx.experience[0].company}** (${ctx.experience[0].period}). ${ctx.experience[0].description} Key achievements include reducing page load by 65%, architecting a component library used by 8+ teams, and building a dashboard handling 1M+ data points.`,
+    answer: `Parv is currently a **${ctx.experience[0].role}** at **${ctx.experience[0].company}** (${ctx.experience[0].period}). ${ctx.experience[0].description} Key achievements include shipping interactive cognitive games that drive new revenue streams, building a role-based Admin Portal that improved operational efficiency by 40%, and achieving zero critical/high-risk vulnerabilities in penetration testing.`,
   },
   {
     keywords: ["react", "typescript", "frontend framework"],
@@ -42,7 +42,7 @@ const FAQ_ENTRIES: FAQEntry[] = [
   },
   {
     keywords: ["ai", "machine learning", "ml", "artificial intelligence", "openai", "claude", "llm"],
-    answer: `Parv has hands-on AI/ML integration experience:\n\n- Built **ResumeAI** using Anthropic Claude for resume analysis\n- Built **ChatPDF** with RAG pipeline and TF-IDF for document intelligence\n- Works with OpenAI API at ${ctx.currentCompany} for healthcare AI interfaces\n- Proficient with RAG and vector databases`,
+    answer: `Parv has hands-on AI/ML integration experience:\n\n- Built **ResumeAI** using Anthropic Claude for resume analysis and bullet rewriting\n- Built **ChatPDF** with a full RAG pipeline (TF-IDF retrieval + Claude streaming) for document Q&A\n- At True Sparrow, developed an AI-powered PoC using OpenAI GPT-3 and Stable Diffusion for text and image generation\n- Familiar with RAG patterns and modern LLM tooling (Anthropic Claude, OpenAI, Vercel AI SDK)`,
   },
   {
     keywords: ["resume", "cv", "download"],
@@ -62,11 +62,11 @@ const FAQ_ENTRIES: FAQEntry[] = [
   },
   {
     keywords: ["why hire", "strengths", "why parv", "what makes", "stand out"],
-    answer: `Here's why Parv stands out:\n\n- **Performance expert** — 65% load time reduction, 98+ Lighthouse scores\n- **AI integration** — Hands-on experience with Claude, OpenAI, RAG pipelines\n- **Scale** — Built dashboards handling 1M+ data points, component libraries for 8+ teams\n- **Leadership** — Mentored 5 junior developers\n- **Reliability** — 100% client satisfaction as a freelancer, 20+ successful projects`,
+    answer: `Here's why Parv stands out:\n\n- **Performance impact** — Cut Lifesight dashboard load time from 14s to <1s (10× faster) by replacing fragmented charting with a unified visualization layer\n- **0 → 1 builder** — Founding frontend engineer at Neurowyzr; took the platform from concept to production\n- **AI integration** — Built ResumeAI (Claude) and ChatPDF (RAG) end-to-end; shipped an AI content PoC with GPT-3 + Stable Diffusion at True Sparrow\n- **Operational impact** — Admin Portal at Neurowyzr improved ops efficiency by 40%\n- **Security** — Zero critical/high-risk vulnerabilities in penetration testing\n- **Leadership** — Led a contract engineering team across multiple client deployments`,
   },
   {
     keywords: ["education", "degree", "university", "college", "school", "study"],
-    answer: `I don't have specific education details on file. For information about Parv's educational background, please reach out at **${ctx.email}** or check his [LinkedIn](${ctx.linkedin}).`,
+    answer: `Parv holds a **${ctx.education.degree}** from **${ctx.education.institution}** (${ctx.education.location}), ${ctx.education.period}.`,
   },
 ];
 
