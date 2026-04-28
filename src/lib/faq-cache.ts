@@ -70,6 +70,13 @@ const FAQ_ENTRIES: FAQEntry[] = [
   },
 ];
 
+function escapeRegex(s: string): string {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+// Word-boundary match: ensures keyword "hi" matches "Hi there" but not "his"
+// or "history". When no entry matches confidently, returns null so route.ts
+// falls through to the Claude AI layer.
 export function findFAQMatch(query: string): string | null {
   const normalized = query.toLowerCase().trim();
 
@@ -79,7 +86,8 @@ export function findFAQMatch(query: string): string | null {
   for (const entry of FAQ_ENTRIES) {
     let score = 0;
     for (const keyword of entry.keywords) {
-      if (normalized.includes(keyword)) {
+      const pattern = new RegExp(`\\b${escapeRegex(keyword)}\\b`);
+      if (pattern.test(normalized)) {
         score += keyword.split(" ").length;
       }
     }
