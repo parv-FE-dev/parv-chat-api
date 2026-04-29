@@ -26,7 +26,7 @@ const FAQ_ENTRIES: FAQEntry[] = [
   },
   {
     keywords: ["projects", "built", "portfolio", "what has he built", "showcase"],
-    answer: `Parv has built some cool projects:\n\n- **${ctx.projects[0].name}** — ${ctx.projects[0].description} [Live](${ctx.projects[0].url})\n- **${ctx.projects[1].name}** — ${ctx.projects[1].description} [Live](${ctx.projects[1].url})`,
+    answer: `Here's a snapshot of what Parv has shipped across his roles:\n\n- **${ctx.experience[0].company}** — ${ctx.experience[0].achievements[0]}\n- **${ctx.experience[1].company}** — ${ctx.experience[1].achievements[0]}\n- **${ctx.experience[2].company}** — ${ctx.experience[2].achievements[0]}\n\nFor the full picture, ask about his experience or reach out at **${ctx.email}**.`,
   },
   {
     keywords: ["contact", "email", "reach", "hire", "get in touch", "connect"],
@@ -42,7 +42,7 @@ const FAQ_ENTRIES: FAQEntry[] = [
   },
   {
     keywords: ["ai", "machine learning", "ml", "artificial intelligence", "openai", "claude", "llm"],
-    answer: `Parv has hands-on AI/ML integration experience:\n\n- Built **ResumeAI** using Anthropic Claude for resume analysis and bullet rewriting\n- Built **ChatPDF** with a full RAG pipeline (TF-IDF retrieval + Claude streaming) for document Q&A\n- At True Sparrow, developed an AI-powered PoC using OpenAI GPT-3 and Stable Diffusion for text and image generation\n- Familiar with RAG patterns and modern LLM tooling (Anthropic Claude, OpenAI, Vercel AI SDK)`,
+    answer: `Parv has hands-on AI/ML integration experience:\n\n- At **True Sparrow**, developed an AI-powered PoC using OpenAI GPT-3 and Stable Diffusion APIs for text and image generation\n- At **Neurowyzr**, builds interactive AI-driven cognitive assessment games as the founding frontend engineer\n- Familiar with RAG patterns and modern LLM tooling (Anthropic Claude, OpenAI, Vercel AI SDK)`,
   },
   {
     keywords: ["resume", "cv", "download"],
@@ -62,7 +62,7 @@ const FAQ_ENTRIES: FAQEntry[] = [
   },
   {
     keywords: ["why hire", "strengths", "why parv", "what makes", "stand out"],
-    answer: `Here's why Parv stands out:\n\n- **Performance impact** — Cut Lifesight dashboard load time from 14s to <1s (10× faster) by replacing fragmented charting with a unified visualization layer\n- **0 → 1 builder** — Founding frontend engineer at Neurowyzr; took the platform from concept to production\n- **AI integration** — Built ResumeAI (Claude) and ChatPDF (RAG) end-to-end; shipped an AI content PoC with GPT-3 + Stable Diffusion at True Sparrow\n- **Operational impact** — Admin Portal at Neurowyzr improved ops efficiency by 40%\n- **Security** — Zero critical/high-risk vulnerabilities in penetration testing\n- **Leadership** — Led a contract engineering team across multiple client deployments`,
+    answer: `Here's why Parv stands out:\n\n- **Performance impact** — Cut Lifesight dashboard load time from 14s to <1s (10× faster) by replacing fragmented charting with a unified visualization layer\n- **0 → 1 builder** — Founding frontend engineer at Neurowyzr; took the platform from concept to production\n- **AI integration** — Shipped an AI-powered content PoC with GPT-3 + Stable Diffusion at True Sparrow; builds AI-driven cognitive games at Neurowyzr\n- **Operational impact** — Admin Portal at Neurowyzr improved ops efficiency by 40%\n- **Security** — Zero critical/high-risk vulnerabilities in penetration testing\n- **Leadership** — Led a contract engineering team across multiple client deployments`,
   },
   {
     keywords: ["education", "degree", "university", "college", "school", "study"],

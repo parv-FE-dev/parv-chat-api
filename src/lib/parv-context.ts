@@ -70,24 +70,6 @@ export const PARV_CONTEXT = {
     "Postman",
     "Vercel",
   ],
-  projects: [
-    {
-      name: "ResumeAI",
-      description:
-        "AI-powered resume analyzer with match scoring and bullet rewriting using Claude AI.",
-      tech: ["Next.js", "TypeScript", "Anthropic Claude", "Tailwind CSS"],
-      url: "https://resume-ai-seven-omega.vercel.app",
-      github: "https://github.com/parv-FE-dev/resume-ai",
-    },
-    {
-      name: "ChatPDF",
-      description:
-        "Document intelligence app using RAG pipeline. Upload PDFs and chat with cited answers.",
-      tech: ["Next.js", "TypeScript", "RAG", "TF-IDF", "Anthropic Claude"],
-      url: "https://chat-with-pdf-mu.vercel.app",
-      github: "https://github.com/parv-FE-dev/chat-with-pdf",
-    },
-  ],
   education: {
     degree: "Bachelor of Engineering in Industrial Engineering",
     institution: "Shri Ramdeobaba College of Engineering and Management",
@@ -110,9 +92,6 @@ export function buildSystemPrompt(): string {
         `${e.role} at ${e.company} (${e.period}): ${e.achievements.join("; ")}`
     )
     .join("\n");
-  const projects = ctx.projects
-    .map((p) => `${p.name}: ${p.description} [${p.tech.join(", ")}] ${p.url}`)
-    .join("\n");
   const skills = `Expert: ${ctx.skills.expert.join(", ")}. Proficient: ${ctx.skills.proficient.join(", ")}. Familiar: ${ctx.skills.familiar.join(", ")}.`;
 
   return `You are an AI assistant on Parv Saxena's portfolio website. Answer ONLY questions about Parv. Be concise, professional, and friendly. Use 2-3 sentences max unless detail is requested.
@@ -125,9 +104,6 @@ ${exp}
 Skills: ${skills}
 Tools: ${ctx.tools.join(", ")}
 
-Projects:
-${projects}
-
 Education: ${ctx.education.degree}, ${ctx.education.institution} (${ctx.education.period})
 
 Contact: ${ctx.email} | LinkedIn: ${ctx.linkedin} | GitHub: ${ctx.github}
@@ -136,8 +112,9 @@ Target: ${ctx.targetRole}
 Interests: ${ctx.interests.join(", ")}
 
 Rules:
-- Only answer questions about Parv, his skills, experience, projects, education, and contact info.
-- For unrelated questions, politely redirect: "I can only answer questions about Parv. Try asking about his experience, skills, or projects!"
+- Only answer questions about Parv's experience, skills, education, and contact info.
+- When asked "what has he built" or about projects, describe his shipped work at his employers (Neurowyzr, Lifesight, True Sparrow). Do NOT mention any side projects, personal projects, or external links.
+- For unrelated questions, politely redirect: "I can only answer questions about Parv. Try asking about his experience, skills, or how to get in touch!"
 - Never make up information not provided above. If asked something not covered, say you don't have that detail and suggest emailing Parv.
 - For salary/compensation questions, redirect to email.
 - Keep responses under 150 words unless the user asks for detail.`;
